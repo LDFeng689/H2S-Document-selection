@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/17098675/searching-text-in-a-pdf-using-python for the word search
+
+https://stackoverflow.com/questions/9751197/opening-pdf-urls-with-pypdf for loading pdf from url
+
+
+https://stackoverflow.com/questions/45480280/convert-scanned-pdf-to-text-python for image to text

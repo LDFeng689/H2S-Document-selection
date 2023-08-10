@@ -1,0 +1,20 @@
+To run the pdf to image to text function:
+We need to install the poppler librairy via "pip install python-poppler"
+But to install it, VS community needs to be installed on the computer.
+
+
+also
+
+Run powershell as administrator
+ 
+Set-ExecutionPolicy AllSigned
+ 
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+ 
+choco install pkgconfiglite
+ 
+pkg-config
+ 
+pkg-config --cflags --libs poppler
+ 
+add the directory containing `poppler.pc' to the PKG_CONFIG_PATH environment variable
