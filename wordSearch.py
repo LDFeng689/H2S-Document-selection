@@ -32,12 +32,12 @@ cell_format = workbook.add_format({
 
 #Creating the headers
 #Column for the reports that mentions H2S
-worksheet.merge_range("A1:B1", "H2S and Hydrocarbon Candidate", headers_format)   
+worksheet.merge_range("A1:B1", "H2S", headers_format)   
 worksheet.write(1,0, "Well Number", headers_format)
 worksheet.write(1,1, "Link to report", headers_format)
 
 #Column for the reports that mentions methane or is work in progress
-worksheet.merge_range("E1:F1", "Pending", headers_format)
+worksheet.merge_range("E1:F1", "Pending and Hydrocarbon Candidate", headers_format)
 worksheet.write(1,4, "Well Number", headers_format)
 worksheet.write(1,5, "Link to report", headers_format)
 
@@ -65,6 +65,9 @@ wordList = ["H2S",
             "ulfure d'hydrogène", 
             "ulfite", 
             "ulfide", 
+
+            ] 
+wordlist2 = ["Travaux à réaliser",
             "ontamination d'Hydrocarbure",
             "ontamination d'hydrocarbure",
             "ontaminé aux hydrocarbures",
@@ -78,11 +81,7 @@ wordList = ["H2S",
             "ethane",
             "Ethane",
             "CH4",
-            "C2H6",
-
-            ] 
-wordlist2 = ["Travaux à réaliser",
-]
+            "C2H6",]
 #there are 2 lists so that the reports that mentions H2S are categorized first
 
 #Start the timer to see the runtime of the program
