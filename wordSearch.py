@@ -32,12 +32,12 @@ cell_format = workbook.add_format({
 
 #Creating the headers
 #Column for the reports that mentions H2S
-worksheet.merge_range("A1:B1", "H2S Candidate", headers_format)   
+worksheet.merge_range("A1:B1", "H2S and Hydrocarbon Candidate", headers_format)   
 worksheet.write(1,0, "Well Number", headers_format)
 worksheet.write(1,1, "Link to report", headers_format)
 
 #Column for the reports that mentions methane or is work in progress
-worksheet.merge_range("E1:F1", "Hydrocarbon and pending", headers_format)
+worksheet.merge_range("E1:F1", "Pending", headers_format)
 worksheet.write(1,4, "Well Number", headers_format)
 worksheet.write(1,5, "Link to report", headers_format)
 
@@ -114,7 +114,7 @@ def filterPDF():
                     worksheet.write(rowH2S,0, number[i], cell_format)
                     worksheet.write(rowH2S,1, pdfLinks[i], cell_format)
                     rowH2S+=1
-                elif result == "Met":
+                elif result == "Pending":
                     worksheet.write(rowMet,4, number[i], cell_format)   #implement the code here for image to text
                     worksheet.write(rowMet,5, pdfLinks[i], cell_format)
                     rowMet+=1
@@ -196,7 +196,7 @@ def wordSearch(url, target: [str], target2: [str]):
         for k in range(len(target2)):
             res_search = re.search(target2[k], text)   
             if res_search is not None:
-                return ("Met")
+                return ("Pending")
     #after all the searches, if nothing was found, return a "nothing" string for the filter to classify it as not interesting
     return ("Nothing")
 
@@ -224,12 +224,12 @@ def imageSearch(path, target:[str], target2):
                 res_search = re.search(target[j], text)   #for each elements in the list "target", we do a word search by pattern matching in each page of the pdf
                 if res_search is not None:
                     os.remove(temp)
-                    return("Present")
+                    return("H2S")
             for k in range(len(target2)):
                 res_search = re.search(target2[k], text)   #for each elements in the list "target", we do a word search by pattern matching in each page of the pdf
                 if res_search is not None:
                     os.remove(temp)
-                    return ("Met")
+                    return ("Pending")
 
     os.remove(temp)
     return("Image")
