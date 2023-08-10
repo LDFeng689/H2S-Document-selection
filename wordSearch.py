@@ -65,9 +65,6 @@ wordList = ["H2S",
             "ulfure d'hydrogène", 
             "ulfite", 
             "ulfide", 
-
-            ] 
-wordlist2 = ["Travaux à réaliser",
             "ontamination d'Hydrocarbure",
             "ontamination d'hydrocarbure",
             "ontaminé aux hydrocarbures",
@@ -81,7 +78,11 @@ wordlist2 = ["Travaux à réaliser",
             "ethane",
             "Ethane",
             "CH4",
-            "C2H6",]
+            "C2H6",
+
+            ] 
+wordlist2 = ["Travaux à réaliser",
+]
 #there are 2 lists so that the reports that mentions H2S are categorized first
 
 #Start the timer to see the runtime of the program

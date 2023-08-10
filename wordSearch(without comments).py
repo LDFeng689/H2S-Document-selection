@@ -50,9 +50,7 @@ data = pd.read_csv(data_url)
 wordList = ["H2S",
             "ulfure d'hydrogène", 
             "ulfite", 
-            "ulfide", 
-            ] 
-wordlist2 = ["Travaux à réaliser",
+            "ulfide",
             "ontamination d'Hydrocarbure",
             "ontamination d'hydrocarbure",
             "ontaminé aux hydrocarbures",
@@ -66,7 +64,10 @@ wordlist2 = ["Travaux à réaliser",
             "ethane",
             "Ethane",
             "CH4",
-            "C2H6",]
+            "C2H6", 
+            ] 
+wordlist2 = ["Travaux à réaliser",
+]
 
 start = time.time()
 
